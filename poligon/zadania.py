@@ -5,7 +5,7 @@ from statistics import mean
 
 class Task:
 
-    def isPrime(number):
+    def is_prime(number):
         try:
             if number < 2:
                 raise Exception("Number should be greater than 1")
@@ -18,16 +18,16 @@ class Task:
                 isPrime = False
         return isPrime
 
-    def getFibonacci(number):
+    def get_fibonacci(number):
         if (number == 1 or number == 2):
             return 1
         else:
-            return Task.getFibonacci(number - 1) + Task.getFibonacci(number - 2)
+            return Task.get_fibonacci(number - 1) + Task.get_fibonacci(number - 2)
 
-    def getNthRoots(list, number):
+    def get_nth_roots(list, number):
         for i, value in enumerate(list):
             list[i] = gm.root(list[i], number)[0]
         return list
 
-    def calcualteAverage(list):
+    def calculate_average(list):
         return mean(list)
